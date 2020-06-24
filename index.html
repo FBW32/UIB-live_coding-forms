@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form action="https://formspree.io/xbjzkneg" method="POST">
+      <!-- The action attribute defines the location (URL) where the form's collected
+      data should be sent when it is submitted. The method attribute defines
+      which HTTP method to send the data with (usually GET or POST) -->
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            name="user_name"
+            id="name"
+            maxlength="36"
+            required
+          />
+        </li>
+        <li>
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            name="user_email"
+            id="email"
+            placeholder="Enter email here"
+          />
+        </li>
+        <li>
+          <label for="msg">Message:</label>
+          <textarea
+            name="user_message"
+            id="msg"
+            placeholder="Enter whatever"
+            required
+          ></textarea>
+        </li>
+        <li class="button">
+          <button type="submit">Send your message</button>
+        </li>
+      </ul>
+      <!-- A click on the submit button sends the form's data to the webpage defined by the action attribute of the form element. -->
+    </form>
+
+    <!-- OPTGROUP -->
+
+    <form action="">
+      <label for="city-select">Choose your destination:</label>
+
+      <select name="cities" id="city-select">
+        <option value="">--Please select your city--</option>
+        <optgroup label="European Cities">
+          <option value="dublin">Dublin</option>
+          <option value="madrid">Madrid</option>
+          <option value="lisbon">Lisbon</option>
+          <option value="istanbul">Istanbul</option>
+        </optgroup>
+        <optgroup label="Asian Cities">
+          <option value="tokyo">Tokyo</option>
+          <option value="damascus">Damascus</option>
+          <option value="tehran">Tehran</option>
+          <option value="dubai">Dubai</option>
+        </optgroup>
+      </select>
+    </form>
+
+    <!-- FILE INPUT -->
+    <form>
+      <p>Upload your song in MP3 format</p>
+      <input type="file" name="user-song" />
+      <input type="submit" value="Upload" />
+    </form>
+
+    <!-- DATALIST -->
+
+    <form action="">
+      <label for="music-genre">Choose your favorite genre:</label>
+      <input list="music-styles" id="music-genre" name="music-genre" />
+
+      <datalist id="music-styles">
+        <option value="Grunge"> </option>
+        <option value="Hip-Hop"></option>
+        <option value="Indie"></option>
+        <option value="Jazz"></option>
+        <option value="World Music"></option>
+        <option value="Alternative"></option>
+        <option value="Rock"></option>
+        <option value="Classical"></option>
+        <option value="Electro Synth"></option>
+        <option value="Techno"></option>
+      </datalist>
+    </form>
+  </body>
+</html>

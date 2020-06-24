@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  margin: 15% auto;
+  width: 400px;
+
+  border: 1px solid #ccc;
+  border-radius: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+textarea {
+  font: 1rem sans-serif;
+  /* uniform text field size */
+  width: 300px;
+  margin: 8px;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+.button {
+  padding-left: 130px;
+  margin-top: 12px;
+}
+
+input:focus,
+textarea:focus {
+  background: yellow;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+input[type="email"]:disabled {
+  background: crimson;
+}
